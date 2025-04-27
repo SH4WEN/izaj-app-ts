@@ -350,7 +350,7 @@ function Dashboard() {
         <div className="p-6">
           <div className="flex items-center gap-3 mb-6">
             <Lightbulb className="text-gray-500" size={20} />
-            <h5 className="text-lg font-medium">Current Inventory</h5>
+            <h5 className="text-lg font-medium">Top Products</h5>
           </div>
 
           <div className="overflow-x-auto">

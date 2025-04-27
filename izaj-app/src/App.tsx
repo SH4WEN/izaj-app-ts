@@ -24,8 +24,8 @@ import {
 } from "./components/Sidebar/SidebarContext";
 import Unauthorized from "./components/Unauthorized/Unauthorized";
 import Transferred from "./components/Branch_Request/Transffered";
-import AllStock from "./components/Stock_Components copy/All_Stock";
-import ProductDetails from "./components/Stock_Components copy/ProductDetails";
+import AllStock from "./components/Stock_Components/All_Stock";
+import ProductDetails from "./components/Stock_Components/ProductDetails";
 
 // Define props for Layout component
 interface LayoutProps {
@@ -90,6 +90,7 @@ const App: React.FC = () => {
               </ProtectedRoute>
             }
           />
+
           <Route
             path="/branch_location"
             element={

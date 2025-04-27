@@ -15,6 +15,8 @@ interface Product {
   description: string;
 }
 
+const CATEGORIES = ["Bulbs", "Lights", "Fixtures", "Accessories"] as const;
+
 function ProductDetails() {
   const { isCollapsed } = useSidebar();
   const { productId } = useParams<{ productId: string }>();
@@ -114,14 +116,28 @@ function ProductDetails() {
                 <label className="block text-sm font-medium text-gray-700">
                   Category
                 </label>
-                <input
+                {/* <input
                   type="text"
                   name="category"
                   value={product.category}
                   onChange={handleInputChange}
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
-                />
+                /> */}
+                <select
+                  name="category"
+                  value={product.category}
+                  onChange={handleInputChange}
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                >
+                  <option value="">Select a category</option>
+                  {CATEGORIES.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               {/* Price */}

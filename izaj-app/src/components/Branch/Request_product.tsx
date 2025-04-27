@@ -44,6 +44,7 @@ function Request_product() {
       quantity: requestQuantity,
     });
     alert("Request Successful!");
+    return navigate("/branch_products");
   };
 
   // Handle input change for quantity

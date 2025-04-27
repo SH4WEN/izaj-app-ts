@@ -273,13 +273,16 @@ function AllStock() {
                     Status
                   </label>
                   <select
-                    disabled={true}
+                    disabled={false}
                     name="status"
                     value={newProduct.status}
                     onChange={handleInputChange}
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   >
+                    <option value="In Stock">In Stock</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="In Stock">In Stock</option>
                     <option value="In Stock">In Stock</option>
                   </select>
                 </div>
