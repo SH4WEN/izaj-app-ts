@@ -21,7 +21,7 @@ function Transferred() {
       id: "001",
       name: "LED Bulb",
       category: "Bulbs",
-      price: "$5.99",
+      price: "Php 655.99",
       stock: 100,
       status: "Transferred",
       description: "Energy-efficient LED bulb with a lifespan of 25,000 hours.",
@@ -59,7 +59,7 @@ function Transferred() {
               <thead>
                 <tr className="bg-gray-100">
                   <th className="px-4 py-2 text-left text-sm font-medium text-gray-700">
-                    Product ID
+                    SKU/CODE
                   </th>
                   <th className="px-4 py-2 text-left text-sm font-medium text-gray-700">
                     Product Name

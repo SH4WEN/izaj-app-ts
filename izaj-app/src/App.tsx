@@ -26,6 +26,7 @@ import Unauthorized from "./components/Unauthorized/Unauthorized";
 import Transferred from "./components/Branch_Request/Transffered";
 import AllStock from "./components/Stock_Components/All_Stock";
 import ProductDetails from "./components/Stock_Components/ProductDetails";
+import Send_Request from "./components/Branch_Request/Send_Request";
 
 // Define props for Layout component
 interface LayoutProps {
@@ -42,12 +43,14 @@ const routeRoles: Record<string, UserRole[]> = {
   branchProducts: ["admin", "branchManager", "superAdmin"],
   branchCategory: ["admin", "branchManager", "superAdmin"],
   requestProduct: ["admin", "branchManager", "superAdmin"],
-  pendingRequest: ["admin", "branchManager", "superAdmin"],
+  send_request: ["admin", "branchManager", "superAdmin"],
+
+  pendingRequest: ["branchManager", "superAdmin"],
   transferred: ["admin", "branchManager", "superAdmin"],
-  awaitingApproval: ["admin", "branchManager", "superAdmin"],
+  awaitingApproval: ["branchManager", "superAdmin"],
   allStock: ["admin", "branchManager", "superAdmin"],
   productDetails: ["admin", "branchManager", "superAdmin"],
-  addUser: ["superAdmin"],
+  addUser: ["superAdmin", "branchManager"],
   userManagement: ["superAdmin", "branchManager"],
 };
 
@@ -117,6 +120,16 @@ const App: React.FC = () => {
               <ProtectedRoute allowedRoles={routeRoles.branchCategory}>
                 <Layout>
                   <Branch_category />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/send_request"
+            element={
+              <ProtectedRoute allowedRoles={routeRoles.send_request}>
+                <Layout>
+                  <Send_Request />
                 </Layout>
               </ProtectedRoute>
             }

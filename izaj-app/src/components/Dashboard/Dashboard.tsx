@@ -205,7 +205,7 @@ function Dashboard() {
       id: "001",
       name: "LED Bulb",
       category: "Bulbs",
-      price: "$5.99",
+      price: "Php 5.99",
       stock: 100,
       status: "in-stock",
     },
@@ -213,7 +213,7 @@ function Dashboard() {
       id: "002",
       name: "Smart Light Strip",
       category: "Smart Lighting",
-      price: "$29.99",
+      price: "Php 29.99",
       stock: 50,
       status: "in-stock",
     },
@@ -221,7 +221,7 @@ function Dashboard() {
       id: "003",
       name: "Chandelier",
       category: "Decorative",
-      price: "$199.99",
+      price: "Php 199.99",
       stock: 10,
       status: "low-stock",
     },
@@ -229,7 +229,7 @@ function Dashboard() {
       id: "004",
       name: "Floodlight",
       category: "Outdoor",
-      price: "$49.99",
+      price: "Php 49.99",
       stock: 25,
       status: "in-stock",
     },
@@ -237,7 +237,7 @@ function Dashboard() {
       id: "005",
       name: "Desk Lamp",
       category: "Lamps",
-      price: "$39.99",
+      price: "Php 39.99",
       stock: 0,
       status: "out-of-stock",
     },
@@ -397,7 +397,7 @@ function Dashboard() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
                       <span
-                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full Php {
                           product.status === "in-stock"
                             ? "bg-green-100 text-green-800"
                             : product.status === "low-stock"

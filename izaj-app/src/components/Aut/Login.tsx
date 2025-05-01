@@ -13,11 +13,42 @@ function Login() {
     if (email === "admin@example.com" && password === "password") {
       localStorage.setItem("isAuthenticated", "true");
       localStorage.setItem("userRole", "admin");
-      navigate("/sidebar/dashboard");
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: "admin@example.com",
+          username: "Admin",
+          role: "admin",
+        })
+      );
+      navigate("/dashboard");
+    } else if (
+      email === "BranchManager@example.com" &&
+      password === "password"
+    ) {
+      localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("userRole", "branchManager");
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: "BranchManager@example.com",
+          username: "Branch Manager",
+          role: "branchManager",
+        })
+      );
+      navigate("/dashboard");
     } else if (email === "superAdmin@example.com" && password === "password") {
       localStorage.setItem("isAuthenticated", "true");
       localStorage.setItem("userRole", "superAdmin");
-      navigate("/sidebar/add-user");
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: "superAdmin@example.com",
+          username: "Super Admin",
+          role: "superAdmin",
+        })
+      );
+      navigate("dashboard");
     } else {
       alert("Invalid credentials");
     }
