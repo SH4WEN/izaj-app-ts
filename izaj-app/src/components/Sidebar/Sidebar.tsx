@@ -98,6 +98,12 @@ function Sidebar() {
     },
     {
       icon: CubeIcon,
+      label: "Sales",
+      path: "/sales",
+      allowedRoles: ["admin", "branchManager", "superAdmin"],
+    },
+    {
+      icon: CubeIcon,
       label: "Stock",
       path: "/all_stock",
       allowedRoles: ["admin", "branchManager", "superAdmin"],

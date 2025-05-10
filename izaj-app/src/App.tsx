@@ -27,6 +27,7 @@ import Transferred from "./components/Branch_Request/Transffered";
 import AllStock from "./components/Stock_Components/All_Stock";
 import ProductDetails from "./components/Stock_Components/ProductDetails";
 import Send_Request from "./components/Branch_Request/Send_Request";
+import Sales from "./components/Sales/Sales";
 
 // Define props for Layout component
 interface LayoutProps {
@@ -44,7 +45,7 @@ const routeRoles: Record<string, UserRole[]> = {
   branchCategory: ["admin", "branchManager", "superAdmin"],
   requestProduct: ["admin", "branchManager", "superAdmin"],
   send_request: ["admin", "branchManager", "superAdmin"],
-
+  sales: ["admin", "branchManager", "superAdmin"],
   pendingRequest: ["branchManager", "superAdmin"],
   transferred: ["admin", "branchManager", "superAdmin"],
   awaitingApproval: ["branchManager", "superAdmin"],
@@ -170,6 +171,16 @@ const App: React.FC = () => {
               <ProtectedRoute allowedRoles={routeRoles.awaitingApproval}>
                 <Layout>
                   <Awaiting_approval />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/sales"
+            element={
+              <ProtectedRoute allowedRoles={routeRoles.allStock}>
+                <Layout>
+                  <Sales />
                 </Layout>
               </ProtectedRoute>
             }
