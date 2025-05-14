@@ -395,9 +395,9 @@ function Dashboard() {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {product.stock}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                    <td className="px-4 py-3 whitespace-nowrap text-sm">
                       <span
-                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full Php {
+                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
                           product.status === "in-stock"
                             ? "bg-green-100 text-green-800"
                             : product.status === "low-stock"
