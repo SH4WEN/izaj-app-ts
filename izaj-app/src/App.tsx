@@ -14,7 +14,6 @@ import Branch_category from "./components/Branch/Branch_category";
 import Branch_location from "./components/Branch/Branch_location";
 import ProductTable from "./components/Branch/ProductTable";
 import Request_product from "./components/Branch/Request_product";
-import Awaiting_approval from "./components/Branch_Request/Awaiting_approval";
 import Pending_request from "./components/Branch_Request/Pending_request";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -165,16 +164,7 @@ const App: React.FC = () => {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/awaiting_approval/:productId"
-            element={
-              <ProtectedRoute allowedRoles={routeRoles.awaitingApproval}>
-                <Layout>
-                  <Awaiting_approval />
-                </Layout>
-              </ProtectedRoute>
-            }
-          />
+
           <Route
             path="/sales"
             element={
