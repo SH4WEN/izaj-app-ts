@@ -13,7 +13,7 @@ import UserManagement from "./components/Branch-Manager-SuperAdmin/UserManagemen
 import Branch_category from "./components/Branch/Branch_category";
 import Branch_location from "./components/Branch/Branch_location";
 import ProductTable from "./components/Branch/ProductTable";
-import Request_product from "./components/Branch/Request_product";
+import Request_product from "./components/Branch/View_product";
 import Pending_request from "./components/Branch_Request/Pending_request";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -27,6 +27,7 @@ import AllStock from "./components/Stock_Components/All_Stock";
 import ProductDetails from "./components/Stock_Components/ProductDetails";
 import Send_Request from "./components/Branch_Request/Send_Request";
 import Sales from "./components/Sales/Sales";
+import Requested_Item from "./components/Branch_Request/Requested_Item";
 
 // Define props for Layout component
 interface LayoutProps {
@@ -44,6 +45,8 @@ const routeRoles: Record<string, UserRole[]> = {
   branchCategory: ["admin", "branchManager", "superAdmin"],
   requestProduct: ["admin", "branchManager", "superAdmin"],
   send_request: ["admin", "branchManager", "superAdmin"],
+  requested_item: ["admin", "branchManager", "superAdmin"],
+
   sales: ["admin", "branchManager", "superAdmin"],
   pendingRequest: ["branchManager", "superAdmin"],
   transferred: ["admin", "branchManager", "superAdmin"],
@@ -130,6 +133,16 @@ const App: React.FC = () => {
               <ProtectedRoute allowedRoles={routeRoles.send_request}>
                 <Layout>
                   <Send_Request />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/requested_item"
+            element={
+              <ProtectedRoute allowedRoles={routeRoles.send_request}>
+                <Layout>
+                  <Requested_Item />
                 </Layout>
               </ProtectedRoute>
             }

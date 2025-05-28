@@ -94,6 +94,12 @@ function Sidebar() {
           path: "/send_request",
           allowedRoles: ["admin"],
         },
+        {
+          icon: SwitchHorizontalIcon,
+          label: "Requested_Item",
+          path: "/requested_item",
+          allowedRoles: ["admin"],
+        },
       ],
     },
     {
